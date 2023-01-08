@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  db:
+    container_name: mongodb
+    image: mongo:5
+    restart: always
+    environment:
+      MONGODB_DATABASE: kimsasoft
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo:/data/db
