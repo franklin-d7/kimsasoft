@@ -2,7 +2,7 @@ version: '3.7'
 services:
   db:
     container_name: mongodb
-    image: mongo:5
+    image: mongo:6
     restart: always
     environment:
       MONGODB_DATABASE: kimsasoft
