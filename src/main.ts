@@ -17,6 +17,7 @@ async function bootstrap() {
   // prueba 3
   // prueba 4
   // prueba 5
+  // prueba 6
   const config = new DocumentBuilder()
      .addBearerAuth()
     .setTitle('KIMASOFT')
