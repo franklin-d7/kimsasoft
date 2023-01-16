@@ -12,6 +12,7 @@ async function bootstrap() {
     }),
   );
 // probando ssh agent
+  // nueva prueba
   const config = new DocumentBuilder()
      .addBearerAuth()
     .setTitle('KIMASOFT')
