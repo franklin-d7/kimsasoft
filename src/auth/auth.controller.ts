@@ -1,16 +1,17 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Headers} from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { IncomingHttpHeaders } from 'http';
 import { ParseMongoIdPipe } from '../common/pipes/parse-mongo-id/parse-mongo-id.pipe';
 import { AuthService } from './auth.service';
-import { Auth, RawHeaders } from './decorators';
+import { Auth } from './decorators';
 import { GetUser } from './decorators/get-user.decorator';
 import { CreateUserDto, LoginUserDto } from './dto';
 import { UpdateUserDto } from './dto/update-auth.dto';
 import { User } from './entities/user.entity';
 import { ValidRoles } from './interfaces/valid-roles';
 
-
 @Controller('auth')
+@ApiTags("User")
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 

@@ -106,12 +106,8 @@ export class AuthService {
   }
 
   async remove(id: string) {
-    const { deletedCount } = await this.userModel.deleteOne({ _id: id });
-
-    if (deletedCount === 0) {
-      throw new BadRequestException(`User with id "${id}" not found`);
-    }
-
+   
+    await this.userModel.updateOne({_id: id}, { isActive: false } );
     return {
       "statusCode": 200,
       "message": "Users Delete"
